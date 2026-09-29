@@ -20,14 +20,22 @@
        </style> 
     
  <?php
+ echo"Simulación de Calificacio";
 $a=rand(0,10);
-
- if($a = 0 || $a ){
-    echo"Numero 1 ha sido el mayor $a";
- }elseif($b>$a && $b>$c){
+ echo"La nota generada es: $a";
+ if($a = 0 || $a < 5){
+     echo"Calificación; Insuficiente"; 
+ }elseif($a=5 || $a < 6){
      echo"Numero 2 ha sido el mayor $b";
- }else{
-     echo"Numero 3 ha sido el mayor $c";
+
+ }elseif($a=6 || $a < 7){
+     echo"Calificación: Bien";
+ }
+  elseif($a=7 || $a < 9){
+     echo"Calificación: Notable";
+     else{
+        echo"Calificación: Sobresaliente";
+     }
  }
  ?>
 
