@@ -1,3 +1,40 @@
 fetch + merge
 git fetch origin
 git merge origin/main --allow-unrelated-histories
+git clone
+# Clonar solo el último commit (más rápido)
+git clone --depth 1 repositorio
+# Quitar del staging (mantener cambios)
+git reset archivo.txt
+# Commit con mensaje
+git commit -m "Añadida funcionalidad de login"
+# Fusionar una rama en la actual
+git merge nombre-rama
+# Aplicar un commit específico a la rama actual
+git cherry-pick [commit-hash]
+# Rebase interactivo (permite editar commits)
+git rebase -i main
+# Rebase interactivo de los últimos N commits
+git rebase -i HEAD~5
+git checkout -b rama 
+# 10. Limpiar ramas ya fusionadas
+git branch -d
+# Quitar del staging (sin perder cambios)
+git restore --staged archivo.txt
+git remote add origin
+# Fetch de un remoto específico
+git fetch origin
+# Fetch de una rama específica
+git fetch origin nombre-rama
+# Pull con rebase en lugar de merge
+git pull --rebase origin main
+
+# Pull solo si no hay cambios locales
+git pull --ff-only origin main
+
+# Pull de una rama específica
+git pull origin nombre-rama
+# Eliminar remoto
+git remote remove origin
+# Cambiar URL del remoto
+git remote set-url origin nueva-url
